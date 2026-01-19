@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção de Animais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            height: 100%; /* Faz os cards ocuparem o mesmo espaço vertical */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Mantém o botão alinhado no final */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Adoção de Animais</h1>
+        <p>Encontre o companheiro perfeito para o seu lar!</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="~/img/Bunitah.jpg" class="card-img-top" alt="Imagem da Bunitah, uma jovem cadela">
+                    <div class="card-body">
+                        <h5 class="card-title">Ideal para quem busca um animal para apartamento</h5>
+                        <p class="card-text">A Bunitah é uma jovem resgatada do Rio Grande do Sul em maio...</p>
+                        <a href="#" class="btn btn-primary mt-3">Entrar em contato</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="~/img/Filhote.jpg" class="card-img-top" alt="Imagem de um filhote de cachorro">
+                    <div class="card-body">
+                        <h5 class="card-title">Adote cachorrinho super dócil e mansinho</h5>
+                        <p class="card-text">Esse adorável filhote, junto com seus três irmãos...</p>
+                        <a href="#" class="btn btn-primary mt-3">Entrar em contato</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="~/img/Gata.jpg" class="card-img-top" alt="Imagem de uma gata super dócil">
+                    <div class="card-body">
+                        <h5 class="card-title">Doa gata super dócil e mansa</h5>
+                        <p class="card-text">Essa linda gata é super dócil e mansa, perfeita para quem busca...</p>
+                        <a href="#" class="btn btn-primary mt-3">Entrar em contato</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2024 Adoção de Animais. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

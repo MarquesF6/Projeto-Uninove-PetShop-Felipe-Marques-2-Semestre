@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+@{
+	string nome = HttpContextAccessor.HttpContext.Session.GetString("nome");
+}
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<br />
+Seja bem vindo <b>@nome</b>!!!
+<input type="button" onclick="fazer_logout()" value="Sair"/>
+<br /><br />
+
+<h2>Área Administrativa</h2>
+<br>
+
+<a href="/Imobiliaria/PageGerenciarFuncionario">
+    <input type="button" value="Gerenciar Funcionários" style="width:200px" onclick=""/>
+</a><br /><br />
+
+<a href="/Imobiliaria/PageGerenciarImoveis">
+    <input type="button" value="Gerenciar Produtos" style="width:200px" onclick=""/>
+</a>
+
+<script>
+	function fazer_logout(){
+		var jsonEnvio = {};
+		$.ajax({
+			url:"/Funcionario/Logout",
+			data: jsonEnvio,
+			type: "post",
+			success: function (resp){
+				if (resp=="ok"){
+					document.location.href="/Imobiliaria/PageLogin";
+				}else{
+					alert("Ocorreu um erro ao realizar o logout!")
+				}
+				
+			}
+		})
+	}
+
+</script>
+
+</body>
+</html>
